@@ -18,15 +18,17 @@ encoder_conf:
     use_cnn_module: true
     cnn_module_kernel: 31
 
-decoder: transformer
+decoder: hugging_face_transformers
 decoder_conf:
-    attention_heads: 8
-    linear_units: 2048
-    num_blocks: 6
-    dropout_rate: 0.1
-    positional_dropout_rate: 0.1
-    self_attention_dropout_rate: 0.1
-    src_attention_dropout_rate: 0.1
+    causal_lm: False
+    model_name_or_path: "openai-community/gpt-2"
+    # attention_heads: 8
+    # linear_units: 2048
+    # num_blocks: 6
+    # dropout_rate: 0.1
+    # positional_dropout_rate: 0.1
+    # self_attention_dropout_rate: 0.1
+    # src_attention_dropout_rate: 0.1
 
 model_conf:
     ctc_weight: 0.3
@@ -42,7 +44,7 @@ num_workers: 4
 batch_type: numel
 batch_bins: 17500000
 accum_grad: 8
-max_epoch: 5
+max_epoch: 50
 patience: none
 init: none
 best_model_criterion:
