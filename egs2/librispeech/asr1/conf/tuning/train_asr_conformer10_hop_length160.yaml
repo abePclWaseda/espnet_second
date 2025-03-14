@@ -44,7 +44,7 @@ num_workers: 4
 batch_type: numel
 batch_bins: 17500000
 accum_grad: 8
-max_epoch: 50
+max_epoch: 10
 patience: none
 init: none
 best_model_criterion:
