@@ -7,7 +7,7 @@ set -o pipefail
 
 train_set="train_960"
 valid_set="dev"
-test_sets="test_clean test_other dev_clean dev_other"
+test_sets="test_other"
 
 asr_config=conf/train_asr_conformer.yaml
 lm_config=conf/tuning/train_lm_transformer_gpt2.yaml 
