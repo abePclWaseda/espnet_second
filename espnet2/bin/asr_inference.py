@@ -832,19 +832,19 @@ def inference(
         ngram_file=None,
         token_type=None,
         bpemodel=None,
-        device="cuda",
+        device=device,
         maxlenratio=0.0,
         minlenratio=0.0,
         beam_size=20,
         ctc_weight=0.3,
-        lm_weight=1.0,
+        lm_weight=0.1,
         ngram_weight=0.9,
         penalty=0.0,
         nbest=1,
-        # partial_ar=False,
-        # threshold_probability=0.99,
-        # max_seq_len=5,
-        # max_mask_parallel=-1 
+        partial_ar=False,
+        threshold_probability=0.99,
+        max_seq_len=5,
+        max_mask_parallel=-1 
     )
 
     asr_model = speech2text.asr_model
